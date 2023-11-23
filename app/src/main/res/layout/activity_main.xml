@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Button: Take Image from Camera, Gallery -->
+        <Button
+            android:id="@+id/inputImageBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="Take Image"
+            app:icon="@drawable/baseline_add_a_photo_24"
+            android:layout_marginEnd="5dp"
+            android:layout_height="match_parent"/>
+
+        <!-- Button: Recognize text from the image we took from Camera/Gallery -->
+        <Button
+            android:id="@+id/recognizeTextBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="Recognize Text"
+            app:icon="@drawable/baseline_receipt_24"
+            android:layout_marginStart="5dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ImageView: Show image we took from Camera/Gallery -->
+            <ImageView
+                android:id="@+id/imageIv"
+                android:layout_width="match_parent"
+                app:strokeWidth="2dp"
+                android:src="@drawable/baseline_image_24"
+                android:adjustViewBounds="true"
+                android:layout_height="wrap_content"/>
+
+            <!-- TextView: Label to show that below will be the recognized text shown -->
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Recognized Text:"/>
+
+            <!-- EditText: Show the recognized text, you may use TextView instead -->
+            <EditText
+                android:id="@+id/recognizedTextEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
