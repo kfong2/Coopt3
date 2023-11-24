@@ -80,6 +80,9 @@ class MainActivity : AppCompatActivity() {
         //Handle click, show input image dialog
         inputImageBtn.setOnClickListener {
             showInputImageDialog()
+
+            // Clear the content of the recognizedTextEt
+            recognizedTextEt.text.clear()
         }
 
         //Handle click, start recognizing text from image we took from Camera/Gallery
@@ -92,6 +95,9 @@ class MainActivity : AppCompatActivity() {
             else {
                 //imageUri is not null, which means we have picked image, we can recognize text
                 recognizeTextFromImage()
+
+                // Clear the content of the recognizedTextEt
+                recognizedTextEt.text.clear()
             }
         }
     }
@@ -299,3 +305,5 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+
+
