@@ -65,8 +65,7 @@ class MainActivity : AppCompatActivity() {
         recognizedTextEt = findViewById(R.id.recognizedTextEt)
 
         //Init arrays of permissions required for Camera, Gallery
-        cameraPermission =
-            arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        cameraPermission =  arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
         storagePermission = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
 
         //Init setup the permission required for Camera, Gallery
@@ -142,8 +141,10 @@ class MainActivity : AppCompatActivity() {
 
         //Add items Camera, Gallery to PopupMenu, parm 2 is menu id, param 3 is position of this menu item in menu items list,
         //params 4 is title of the menu
-        popupMenu.menu.add(Menu.NONE, 1, 1, "CAMERA")
-        popupMenu.menu.add(Menu.NONE, 2, 2, "GALLERY")
+        //popupMenu.menu.add(Menu.NONE, 1, 1, "CAMERA")
+        //popupMenu.menu.add(Menu.NONE, 2, 2, "GALLERY")
+        popupMenu.menu.add(Menu.NONE, 1, 1, getString(R.string.button_camera))
+        popupMenu.menu.add(Menu.NONE, 2, 2, getString(R.string.button_gallery))
 
         //Show PopupMenu
         popupMenu.show()

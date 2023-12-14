@@ -18,7 +18,7 @@
             android:id="@+id/inputImageBtn"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="Take Image"
+            android:text="@string/button_take_image"
             app:icon="@drawable/baseline_add_a_photo_24"
             android:layout_marginEnd="5dp"
             android:layout_height="match_parent"/>
@@ -28,7 +28,7 @@
             android:id="@+id/recognizeTextBtn"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="Recognize Text"
+            android:text="@string/button_recognize_text"
             app:icon="@drawable/baseline_receipt_24"
             android:layout_marginStart="5dp"
             android:layout_height="match_parent"/>
@@ -59,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Recognized Text:"/>
+                android:text="@string/label_recognized_text"/>
 
             <!-- EditText: Show the recognized text, you may use TextView instead -->
             <EditText
@@ -73,3 +73,4 @@
     </ScrollView>
 
 </LinearLayout>
+

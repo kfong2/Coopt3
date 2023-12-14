@@ -1,3 +1,13 @@
 <resources>
+
+    <!-- activity_main.xml -->
     <string name="app_name">Coopt3</string>
+    <string name="button_take_image">Take Image</string>
+    <string name="button_recognize_text">Recognize Text</string>
+    <string name="label_recognized_text">Recognized Text:</string>
+
+    <!-- MainActivity.kt -->
+    <string name="button_camera">CAMERA</string>
+    <string name="button_gallery">GALLERY</string>
+
 </resources>
